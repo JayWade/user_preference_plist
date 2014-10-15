@@ -20,11 +20,17 @@
                                 <rect key="frame" x="209" y="75" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="doneEditing:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="ezA-oW-Kap"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uen-vZ-odf">
                                 <rect key="frame" x="209" y="131" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="doneEditing:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="GDf-oZ-IDx"/>
+                                </connections>
                             </textField>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="jby-HH-7zl">
                                 <rect key="frame" x="263" y="183" width="94" height="29"/>
@@ -82,6 +88,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="nameText" destination="omW-tq-qUt" id="gTS-Ze-uyU"/>
+                        <outlet property="numberTextField" destination="Uen-vZ-odf" id="4UT-Rz-ElU"/>
+                        <outlet property="progressView" destination="YC3-bQ-0ge" id="Ohc-eH-P4P"/>
+                        <outlet property="segmentedControl" destination="69N-XB-zK9" id="PGJ-pq-N6W"/>
+                        <outlet property="stepper" destination="jby-HH-7zl" id="ZbG-2w-ArE"/>
+                        <outlet property="viewSwitch" destination="S4G-sd-SyK" id="Pws-ih-kGh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

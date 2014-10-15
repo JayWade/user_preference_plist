@@ -27,6 +27,8 @@ class ViewController: UIViewController {
    
    override func viewDidLoad() {
       super.viewDidLoad()
+      println("viewDidLoad()")
+      println("path: \(path)")
       // Do any additional setup after loading the view, typically from a nib.
       let app = UIApplication.sharedApplication()
       let personDictionary = NSDictionary(contentsOfFile: path!)
@@ -39,6 +41,7 @@ class ViewController: UIViewController {
       segmentedControl.addTarget(self, action: "setColorKey:", forControlEvents: .ValueChanged)
       
       person.loadDataFromUserDefaults()
+      person.logAllValues()
    }
    
    override func viewDidAppear(animated: Bool) {
@@ -59,6 +62,7 @@ class ViewController: UIViewController {
    }
    
    func setColorKey(value : Int) {
+      person.logAllValues()
       progressView.setProgress(100, animated: false)
       switch (segmentedControl.selectedSegmentIndex) {
       case 0:
@@ -94,6 +98,7 @@ class ViewController: UIViewController {
    }
    
    func displayModelData() {
+      person.logAllValues()
       nameText.text = person.nameString
       numberTextField.text = "\(person.numberFloat)"
       stepper.value = Double(person.stepperInteger)
@@ -121,9 +126,12 @@ class ViewController: UIViewController {
       person.stepperInteger = Int(stepper.stepValue)
       person.switchBool = viewSwitch.on
       setColorKey(1)
+      person.logAllValues()
    }
    
    func applicationWillEnterForeground(notification : NSNotification) {
+      let personDictionary = NSDictionary(contentsOfFile: path!)
+      person = Person(defaults: personDictionary)
       person.loadDataFromUserDefaults()
       displayModelData()
    }

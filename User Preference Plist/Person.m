@@ -52,4 +52,12 @@ static NSString *kSegmentColorKey = @"IADSegmentColor";
    self.segmentString = [self.dictionary valueForKey:kSegmentColorKey];
 }
 
+- (void)logAllValues {
+   NSLog(@"nameString: %@", self.nameString);
+   NSLog(@"numberFloat: %f", self.numberFloat);
+   NSLog(@"stepperInteger: %ld", (long)self.stepperInteger);
+   NSLog(self.switchBool ? @"true" : @"false");
+   NSLog(@"segmentString: %@", self.segmentString);
+}
+
 @end

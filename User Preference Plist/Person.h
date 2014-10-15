@@ -19,4 +19,5 @@
 - (instancetype)initWithDefaults:(NSDictionary *)dictionary;
 - (void)saveDataToUserDefaults;
 - (void)loadDataFromUserDefaults;
+- (void)logAllValues;
 @end
