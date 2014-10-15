@@ -13,6 +13,8 @@
 		C21ADC6E19EEEF9C002841C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C21ADC6D19EEEF9C002841C4 /* Images.xcassets */; };
 		C21ADC7119EEEF9C002841C4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21ADC6F19EEEF9C002841C4 /* LaunchScreen.xib */; };
 		C21ADC7D19EEEF9C002841C4 /* User_Preference_PlistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ADC7C19EEEF9C002841C4 /* User_Preference_PlistTests.swift */; };
+		C21ADC8B19EEF11B002841C4 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = C21ADC8A19EEF11B002841C4 /* Settings.plist */; };
+		C21ADC9319EEFD64002841C4 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C21ADC9219EEFD64002841C4 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,10 @@
 		C21ADC7619EEEF9C002841C4 /* User Preference PlistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "User Preference PlistTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21ADC7B19EEEF9C002841C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C21ADC7C19EEEF9C002841C4 /* User_Preference_PlistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_Preference_PlistTests.swift; sourceTree = "<group>"; };
+		C21ADC8A19EEF11B002841C4 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		C21ADC9019EEFD63002841C4 /* User Preference Plist-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User Preference Plist-Bridging-Header.h"; sourceTree = "<group>"; };
+		C21ADC9119EEFD64002841C4 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		C21ADC9219EEFD64002841C4 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +83,15 @@
 		C21ADC6319EEEF9C002841C4 /* User Preference Plist */ = {
 			isa = PBXGroup;
 			children = (
+				C21ADC9119EEFD64002841C4 /* Person.h */,
+				C21ADC9219EEFD64002841C4 /* Person.m */,
 				C21ADC6619EEEF9C002841C4 /* AppDelegate.swift */,
 				C21ADC6819EEEF9C002841C4 /* ViewController.swift */,
 				C21ADC6A19EEEF9C002841C4 /* Main.storyboard */,
 				C21ADC6D19EEEF9C002841C4 /* Images.xcassets */,
 				C21ADC6F19EEEF9C002841C4 /* LaunchScreen.xib */,
 				C21ADC6419EEEF9C002841C4 /* Supporting Files */,
+				C21ADC9019EEFD63002841C4 /* User Preference Plist-Bridging-Header.h */,
 			);
 			path = "User Preference Plist";
 			sourceTree = "<group>";
@@ -91,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				C21ADC6519EEEF9C002841C4 /* Info.plist */,
+				C21ADC8A19EEF11B002841C4 /* Settings.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -193,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C21ADC6C19EEEF9C002841C4 /* Main.storyboard in Resources */,
+				C21ADC8B19EEF11B002841C4 /* Settings.plist in Resources */,
 				C21ADC7119EEEF9C002841C4 /* LaunchScreen.xib in Resources */,
 				C21ADC6E19EEEF9C002841C4 /* Images.xcassets in Resources */,
 			);
@@ -212,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C21ADC9319EEFD64002841C4 /* Person.m in Sources */,
 				C21ADC6919EEEF9C002841C4 /* ViewController.swift in Sources */,
 				C21ADC6719EEEF9C002841C4 /* AppDelegate.swift in Sources */,
 			);
@@ -336,9 +348,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "User Preference Plist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "User Preference Plist/User Preference Plist-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -346,9 +361,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "User Preference Plist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "User Preference Plist/User Preference Plist-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -405,6 +422,7 @@
 				C21ADC8219EEEF9C002841C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C21ADC8319EEEF9C002841C4 /* Build configuration list for PBXNativeTarget "User Preference PlistTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +431,7 @@
 				C21ADC8519EEEF9C002841C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
